@@ -17,7 +17,8 @@ def create_similarity_circuit(base_similarity):
     return qc
 
 # Create circuit
-circuit = create_similarity_circuit(0.5)
+circuit = create_similarity_circuit(0.0)
+# circuit = create_similarity_circuit(1.0)
 
 # Simulate ideal results
 ideal_simulator = Aer.get_backend('qasm_simulator')
