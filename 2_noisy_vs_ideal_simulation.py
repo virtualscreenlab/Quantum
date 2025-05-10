@@ -20,7 +20,8 @@ def create_similarity_circuit(base_similarity):
     
     return qc
 
-base_similarity = 0.5
+base_similarity = 0.0
+# base_similarity = 1.0
 circuit = create_similarity_circuit(base_similarity)
 
 # Create a noise model with depolarizing error on CX gates
