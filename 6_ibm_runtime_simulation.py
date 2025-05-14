@@ -40,7 +40,7 @@ mapped_observables = [obs.apply_layout(isa_circuit.layout) for obs in observable
 # Run on real hardware
 estimator = Estimator(backend)
 estimator.options.resilience_level = 1
-estimator.options.default_shots = 1000  # Increase for better accuracy
+estimator.options.default_shots = 10000  # Increase for better accuracy
 
 job = estimator.run([(isa_circuit, mapped_observables)])
 print(f"Job submitted! ID: {job.job_id()}")
