@@ -7,7 +7,7 @@ from qiskit_aer import AerSimulator
 import numpy as np
 import matplotlib.pyplot as plt
 
-def calculate_tanimoto_with_error(smiles1, smiles2, error_rate=0.01, shots=1000, mitigation=True):
+def calculate_tanimoto_with_error(smiles1, smiles2, error_rate=0.01, shots=10000, mitigation=True):
     """
     Calculates Tanimoto similarity with depolarizing noise and improved mitigation.
 
