@@ -26,12 +26,8 @@ instance = "ibm-q/open/main"  # Optional, e.g., "ibm-q/open/main"
 # Save the account
 QiskitRuntimeService.save_account(channel="ibm_quantum", token=token, instance=instance, overwrite=True)
 
-from qiskit_ibm_runtime import QiskitRuntimeService
-
 # List all saved accounts
 print(QiskitRuntimeService.saved_accounts())
-
-from qiskit_ibm_runtime import QiskitRuntimeService
 
 # Initialize the service
 service = QiskitRuntimeService()
@@ -55,7 +51,9 @@ def create_similarity_circuit(base_similarity):
     return qc
 
 # Example usage
-base_similarity = 0.5
+base_similarity = 1.0
+#base_similarity = 0.0
+
 circuit = create_similarity_circuit(base_similarity)
 
 # Visualize the circuit in color
