@@ -2,6 +2,7 @@ import matplotlib
 import qiskit
 
 from qiskit_ibm_runtime import QiskitRuntimeService
+from qiskit.visualization import circuit_drawer
 
 from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit.quantum_info import SparsePauliOp
@@ -59,11 +60,6 @@ circuit = create_similarity_circuit(base_similarity)
 
 # Visualize the circuit in color
 circuit_drawer(circuit, output='mpl')
-
-
-from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
-from qiskit.visualization import circuit_drawer
-import numpy as np
 
 def create_similarity_circuit(base_similarity):
     qr = QuantumRegister(3, 'q')
@@ -156,10 +152,9 @@ pub_result = job.result()[0]
 
 print(pub_result.data.__dict__)
 
-
 observables = ['IIZ', 'IIX', 'IZI', 'IXI', 'ZIZ', 'XIX']
-evs = np.array([ 0.99121094,  0.05322266,  0.92578125,  0.01611328,  0.97900391, -0.01464844])
-stds = np.array([0.00206705, 0.01560285, 0.00590718, 0.01562297, 0.00318502, 0.01562332])
+#evs = np.array([ 0.99121094,  0.05322266,  0.92578125,  0.01611328,  0.97900391, -0.01464844])
+#stds = np.array([0.00206705, 0.01560285, 0.00590718, 0.01562297, 0.00318502, 0.01562332])
 
 plt.figure(figsize=(12, 6))
 plt.bar(observables, evs, yerr=stds, capsize=5)
