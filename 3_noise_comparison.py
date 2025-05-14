@@ -22,7 +22,7 @@ circuit = create_similarity_circuit(0.0)
 
 # Simulate ideal results
 ideal_simulator = Aer.get_backend('qasm_simulator')
-ideal_counts = ideal_simulator.run(circuit, shots=10000).result().get_counts()
+ideal_counts = ideal_simulator.run(circuit, shots=1000).result().get_counts()
 
 # Simulate noisy results
 fake_backend = FakeManilaV2()
