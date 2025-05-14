@@ -38,8 +38,8 @@ circuit_noisy = transpile(circuit, simulator_noisy)
 circuit_ideal = transpile(circuit, simulator_ideal)
 
 # Run simulations
-job_noisy = simulator_noisy.run(circuit_noisy, shots=1000)
-job_ideal = simulator_ideal.run(circuit_ideal, shots=1000)
+job_noisy = simulator_noisy.run(circuit_noisy, shots=10000)
+job_ideal = simulator_ideal.run(circuit_ideal, shots=10000)
 
 # Get results
 result_noisy = job_noisy.result()
