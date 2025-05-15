@@ -10,3 +10,6 @@ Python scripts combining Qiskit & RDKit for quantum-enhanced molecular similarit
 
 ## Requirements
 - Python 3.7+, Qiskit, RDKit
+
+## Contact
+- For questions or feedback, please contact Prof. Sergey Shityakov [shityakoff@hotmail.com] or open an issue in the repository.
